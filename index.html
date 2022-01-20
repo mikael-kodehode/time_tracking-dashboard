@@ -5,11 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 <body>
+  <div class="container flex">
 
+    <div class="profile flex-column">
+      <div class="profile-container flex-row">
+        <img id="profile-picture" src="images/image-jeremy.png" alt="the face of Jeremy Robson">
+        <div>
+          <p id="small-report">Report for</p>
+          <h2>Jeremy Robson</h2>
+        </div>
+      </div> <!--closing profile-container-->
+      <div class="date-container flex-row">
+        <p id="daily">Daily</p>
+        <p id="weekly">Weekly</p>
+        <p id="monthly">Monthly</p>
+      </div>
+    </div> <!--closing profile-->
+
+    <div class="time-tracking flex">
+
+      <div class="subject-content-container" id="work-container">
+        <img  class="subject-icon" src="images/icon-work.svg" alt="">
+        <div class="subject-content flex-column">
+          <div class="subject-top flex-row">
+            <p class="subject-title">Work</p>
+            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+          </div> <!--closing subject-top-->
+          <div class="subject-bottom flex-row">
+            <h1 id="work-hours">32hrs</h1>
+            <p id="work-last" class="last-hours">Last week - 36hrs</p> 
+          </div> <!--closing subject-bottom-->
+        </div> <!--closing subject-content-->
+      </div> <!--closing work-container-->
+
+      <div class="subject-content-container" id="play-container">
+        <img  class="subject-icon" src="images/icon-play.svg" alt="">
+        <div class="subject-content flex-column">
+          <div class="subject-top flex-row">
+            <p class="subject-title">Play</p>
+            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+          </div> <!--closing subject-top-->
+          <div class="subject-bottom flex-row">
+            <h1 id="play-hours">32hrs</h1>
+            <p id="play-last">Last week - 36hrs</p> 
+          </div> <!--closing subject-bottom-->
+        </div> <!--closing subject-content-->
+      </div> <!--closing play-container-->
+
+      <div class="subject-content-container" id="study-container">
+        <img  class="subject-icon" src="images/icon-study.svg" alt="">
+        <div class="subject-content flex-column">
+          <div class="subject-top flex-row">
+            <p class="subject-title">Study</p>
+            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+          </div> <!--closing subject-top-->
+          <div class="subject-bottom flex-row">
+            <h1 id="study-hours">32hrs</h1>
+            <p id="study-last">Last week - 36hrs</p> 
+          </div> <!--closing subject-bottom-->
+        </div> <!--closing subject-content-->
+      </div> <!--closing study-container-->
+
+      <div class="subject-content-container" id="excercise-container">
+        <img  class="subject-icon" src="images/icon-exercise.svg" alt="">
+        <div class="subject-content flex-column">
+          <div class="subject-top flex-row">
+            <p class="subject-title">Excercise</p>
+            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+          </div> <!--closing subject-top-->
+          <div class="subject-bottom flex-row">
+            <h1 id="excercise-hours">32hrs</h1>
+            <p id="excercise-last">Last week - 36hrs</p> 
+          </div> <!--closing subject-bottom-->
+        </div> <!--closing subject-content-->
+      </div> <!--closing excercise-->
+
+      <div class="subject-content-container" id="social-container">
+        <img  class="subject-icon" src="images/icon-social.svg" alt="">
+        <div class="subject-content flex-column">
+          <div class="subject-top flex-row">
+            <p class="subject-title">Social</p>
+            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+          </div> <!--closing subject-top-->
+          <div class="subject-bottom flex-row">
+            <h1 id="social-hours">32hrs</h1>
+            <p id="social-last">Last week - 36hrs</p> 
+          </div> <!--closing subject-bottom-->
+        </div> <!--closing subject-content-->
+      </div> <!--closing social-->
+
+      <div class="subject-content-container" id="self-care-container">
+        <img  class="subject-icon" src="images/icon-self-care.svg" alt="">
+        <div class="subject-content flex-column">
+          <div class="subject-top flex-row">
+            <p class="subject-title">Self-care</p>
+            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+          </div> <!--closing subject-top-->
+          <div class="subject-bottom flex-row">
+            <h1 id="self-care-hours">32hrs</h1>
+            <p id="self-care-last">Last week - 36hrs</p> 
+          </div> <!--closing subject-bottom-->
+        </div> <!--closing subject-content-->
+      </div> <!--closing self-care-->
+
+    </div> <!--closing time-tracking-->
+  </div> <!--closing container-->
   Report for
   Jeremy Robson
 
@@ -68,7 +176,8 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Mikael Svartrud Ødegaard</a>.
   </div>
+  <script src="js/index.js"></script>
 </body>
 </html>
