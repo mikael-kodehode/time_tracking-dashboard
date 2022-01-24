@@ -51,10 +51,13 @@ h2 {
     font-size: 1rem;
 }
 
-#daily,
-#weekly,
-#monthly {
+/* Helps determine which timeframe is active. Class is moved via js*/
+.opacity {
     opacity: .4;
+}
+
+.active-timeframe {
+    opacity: 1;
 }
 
 #small-report {
@@ -188,9 +191,6 @@ h2 {
 .subject-title {
     font-weight: 500;
     margin: 0;
-    opacity: 1;
-}
-#active-timeframe {
     opacity: 1;
 }
 
