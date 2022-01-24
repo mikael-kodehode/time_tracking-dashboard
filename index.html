@@ -13,171 +13,123 @@
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 <body>
-  <div class="container flex">
+  <div class="box-container">
+    <div class="container">
 
-    <div class="profile flex-column">
-      <div class="profile-container flex-row">
-        <img id="profile-picture" src="images/image-jeremy.png" alt="the face of Jeremy Robson">
-        <div>
-          <p id="small-report">Report for</p>
-          <h2>Jeremy Robson</h2>
+      <div class="profile">
+        <div class="profile-container">
+          <img id="profile-picture" src="images/image-jeremy.png" alt="the face of Jeremy Robson">
+          <div class="name">
+            <p id="small-report">Report for</p>
+            <h2>Jeremy Robson</h2>
+          </div>
+        </div> <!--closing profile-container-->
+        <div class="date-container">
+          <p id="daily">Daily</p>
+          <p id="weekly">Weekly</p>
+          <p id="monthly">Monthly</p>
         </div>
-      </div> <!--closing profile-container-->
-      <div class="date-container flex-row">
-        <p id="daily">Daily</p>
-        <p id="weekly">Weekly</p>
-        <p id="monthly">Monthly</p>
-      </div>
-    </div> <!--closing profile-->
-
-    <div class="time-tracking flex">
-
-      <div class="subject-content-container" id="work-container">
-        <img  class="subject-icon" src="images/icon-work.svg" alt="">
-        <div class="subject-content flex-column">
-          <div class="subject-top flex-row">
-            <p class="subject-title">Work</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
-          </div> <!--closing subject-top-->
-          <div class="subject-bottom flex-row">
-            <h1 id="work-hours">32hrs</h1>
-            <p id="work-last" class="last-hours">Last week - 36hrs</p> 
-          </div> <!--closing subject-bottom-->
-        </div> <!--closing subject-content-->
-      </div> <!--closing work-container-->
-
-      <div class="subject-content-container" id="play-container">
-        <img  class="subject-icon" src="images/icon-play.svg" alt="">
-        <div class="subject-content flex-column">
-          <div class="subject-top flex-row">
-            <p class="subject-title">Play</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
-          </div> <!--closing subject-top-->
-          <div class="subject-bottom flex-row">
-            <h1 id="play-hours">32hrs</h1>
-            <p id="play-last">Last week - 36hrs</p> 
-          </div> <!--closing subject-bottom-->
-        </div> <!--closing subject-content-->
-      </div> <!--closing play-container-->
-
-      <div class="subject-content-container" id="study-container">
-        <img  class="subject-icon" src="images/icon-study.svg" alt="">
-        <div class="subject-content flex-column">
-          <div class="subject-top flex-row">
-            <p class="subject-title">Study</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
-          </div> <!--closing subject-top-->
-          <div class="subject-bottom flex-row">
-            <h1 id="study-hours">32hrs</h1>
-            <p id="study-last">Last week - 36hrs</p> 
-          </div> <!--closing subject-bottom-->
-        </div> <!--closing subject-content-->
-      </div> <!--closing study-container-->
-
-      <div class="subject-content-container" id="excercise-container">
-        <img  class="subject-icon" src="images/icon-exercise.svg" alt="">
-        <div class="subject-content flex-column">
-          <div class="subject-top flex-row">
-            <p class="subject-title">Excercise</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
-          </div> <!--closing subject-top-->
-          <div class="subject-bottom flex-row">
-            <h1 id="excercise-hours">32hrs</h1>
-            <p id="excercise-last">Last week - 36hrs</p> 
-          </div> <!--closing subject-bottom-->
-        </div> <!--closing subject-content-->
-      </div> <!--closing excercise-->
-
-      <div class="subject-content-container" id="social-container">
-        <img  class="subject-icon" src="images/icon-social.svg" alt="">
-        <div class="subject-content flex-column">
-          <div class="subject-top flex-row">
-            <p class="subject-title">Social</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
-          </div> <!--closing subject-top-->
-          <div class="subject-bottom flex-row">
-            <h1 id="social-hours">32hrs</h1>
-            <p id="social-last">Last week - 36hrs</p> 
-          </div> <!--closing subject-bottom-->
-        </div> <!--closing subject-content-->
-      </div> <!--closing social-->
-
-      <div class="subject-content-container" id="self-care-container">
-        <img  class="subject-icon" src="images/icon-self-care.svg" alt="">
-        <div class="subject-content flex-column">
-          <div class="subject-top flex-row">
-            <p class="subject-title">Self-care</p>
-            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
-          </div> <!--closing subject-top-->
-          <div class="subject-bottom flex-row">
-            <h1 id="self-care-hours">32hrs</h1>
-            <p id="self-care-last">Last week - 36hrs</p> 
-          </div> <!--closing subject-bottom-->
-        </div> <!--closing subject-content-->
-      </div> <!--closing self-care-->
-
-    </div> <!--closing time-tracking-->
-  </div> <!--closing container-->
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
+      </div> <!--closing profile-->
   
+      <div class="time-tracking">
+        <div class="threecontainer-top">
+  
+          <div class="subject-content-container" id="work-container">
+            <img  class="subject-icon" src="images/icon-work.svg" alt="">
+            <div class="subject-content">
+              <div class="subject-top">
+                <span class="subject-title">Work</span>
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+              </div> <!--closing subject-top-->
+              <div class="subject-bottom">
+                <h1 id="work-hours">4hrs</h1>
+                <p id="work-last" class="last-hours">Last week - 36hrs</p> 
+              </div> <!--closing subject-bottom-->
+            </div> <!--closing subject-content-->
+          </div> <!--closing work-container-->
+    
+          <div class="subject-content-container" id="play-container">
+            <img  class="subject-icon" src="images/icon-play.svg" alt="">
+            <div class="subject-content">
+              <div class="subject-top">
+                <span class="subject-title">Play</span>
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+              </div> <!--closing subject-top-->
+              <div class="subject-bottom">
+                <h1 id="play-hours">32hrs</h1>
+                <p id="play-last" class="last-hours">Last week - 36hrs</p> 
+              </div> <!--closing subject-bottom-->
+            </div> <!--closing subject-content-->
+          </div> <!--closing play-container-->
+    
+          <div class="subject-content-container" id="study-container">
+            <img  class="subject-icon" src="images/icon-study.svg" alt="">
+            <div class="subject-content">
+              <div class="subject-top">
+                <span class="subject-title">Study</span>
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+              </div> <!--closing subject-top-->
+              <div class="subject-bottom">
+                <h1 id="study-hours">32hrs</h1>
+                <p id="study-last" class="last-hours">Last week - 36hrs</p> 
+              </div> <!--closing subject-bottom-->
+            </div> <!--closing subject-content-->
+          </div> <!--closing study-container-->
+        </div> <!--closing threecontainer-->
+  
+        <div class="threecontainer-bottom">
+  
+          <div class="subject-content-container" id="excercise-container">
+            <img  class="subject-icon" src="images/icon-exercise.svg" alt="">
+            <div class="subject-content">
+              <div class="subject-top">
+                <span class="subject-title">Excercise</span>
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+              </div> <!--closing subject-top-->
+              <div class="subject-bottom">
+                <h1 id="excercise-hours">32hrs</h1>
+                <p id="excercise-last" class="last-hours">Last week - 36hrs</p> 
+              </div> <!--closing subject-bottom-->
+            </div> <!--closing subject-content-->
+          </div> <!--closing excercise-->
+    
+          <div class="subject-content-container" id="social-container">
+            <img  class="subject-icon" src="images/icon-social.svg" alt="">
+            <div class="subject-content">
+              <div class="subject-top">
+                <span class="subject-title">Social</span>
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+              </div> <!--closing subject-top-->
+              <div class="subject-bottom">
+                <h1 id="social-hours">32hrs</h1>
+                <p id="social-last" class="last-hours">Last week - 36hrs</p> 
+              </div> <!--closing subject-bottom-->
+            </div> <!--closing subject-content-->
+          </div> <!--closing social-->
+    
+          <div class="subject-content-container" id="self-care-container">
+            <img  class="subject-icon" src="images/icon-self-care.svg" alt="">
+            <div class="subject-content">
+              <div class="subject-top">
+                <span class="subject-title">Self-care</span>
+                <img class="ellipsis" src="images/icon-ellipsis.svg" alt="">
+              </div> <!--closing subject-top-->
+              <div class="subject-bottom">
+                <h1 id="self-care-hours">32hrs</h1>
+                <p id="self-care-last" class="last-hours">Last week - 36hrs</p> 
+              </div> <!--closing subject-bottom-->
+            </div> <!--closing subject-content-->
+          </div> <!--closing self-care-->
+        </div><!--closing threecontainer-->
+      </div> <!--closing time-tracking-->
+    </div> <!--closing container-->
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Mikael Svartrud Ødegaard</a>.
   </div>
+</div> <!--closing box-container-->
+
   <script src="js/index.js"></script>
 </body>
 </html>
