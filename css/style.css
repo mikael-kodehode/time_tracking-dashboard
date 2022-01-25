@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: red 2px solid;
 }
 body {
     margin: 0;
@@ -194,6 +195,13 @@ Mobile version - making everything columns and 400px wide
     }
     .shell-container,
     .inner-container,
+    .time-tracking,
+    .threecontainer-top,
+    .threecontainer-bottom {
+        width: 100%;
+    }
+    .shell-container,
+    .inner-container,
     .name,
     .time-tracking, 
     .threecontainer-top,
@@ -225,6 +233,15 @@ Mobile version - making everything columns and 400px wide
     .subject-bottom {
         justify-content: space-between;
     }
+    .profile,
+    .subject-content-container {
+        width: 80%;
+        max-width: 400px;
+    }
+    .threecontainer-top,
+    .threecontainer-bottom {
+        align-items: center;
+    }
     .shell-container {
         height: initial;
     }
@@ -233,7 +250,6 @@ Mobile version - making everything columns and 400px wide
     }
     .profile {
         align-self: center;
-        width: 400px;
         margin: 5em 0 1em;
         height: 225px;
     }
@@ -257,13 +273,11 @@ Mobile version - making everything columns and 400px wide
     .subject-content-container {
         margin: 1em;
         height: 200px;
-        width: 400px;
+    }
+    .subject-content {
+        padding: 1em;
     }
     /* Changes the credit to stay under the content */
-    .attribution {
-        position:initial;
-        margin-top: 5%;
-    }
 }
 
 
@@ -272,4 +286,10 @@ Mobile version - making everything columns and 400px wide
 
 
 /* Credit */
-.attribution { font-size: 0.75rem; position: absolute; bottom: 0;}
+.attribution { font-size: 0.75rem; position: fixed; bottom: 0;}
+@media (max-width: 1100px) {
+    .attribution {
+        position:initial;
+        margin-top: 5%;
+    }
+}
