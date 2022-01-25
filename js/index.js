@@ -4,113 +4,93 @@ const weeklyBtn = document.querySelector("#weekly");
 const monthlyBtn = document.querySelector("#monthly");
 
 //Main element showing hours 
-const cur = document.getElementsByClassName("cur")
+const curEls = document.getElementsByClassName("cur");
 
 //Elements showing hours last day/week/month
-const pre = document.getElementsByClassName("pre")
+const preEls = document.getElementsByClassName("pre");
+
+let curArr = [];
+let preArr = [];
 
 //Function that resets the active button
-function addOpacity() 
-{
-    const timeframe = [dailyBtn, weeklyBtn, monthlyBtn]
-    for (let x = 0; x < timeframe.length; x++) 
-    {
-        timeframe[x].classList.remove("active-timeframe");
-        timeframe[x].classList.add("opacity");
-    }
-}
-fetch("js/data.json")
-    .then(res => res.json())
-    .then(data => console.log(data))
-//A switch based on a specific parameter from each event listener deciding what timeframe to show.
-function showHours(number) 
-{
-    addOpacity()
-    switch (number)
-    {
-        case 1:
-            dailyBtn.classList.remove("opacity");
-            dailyBtn.classList.add("active-timeframe");
-            for (x in hoursArr) 
-            {        
-                if (data[x].timeframes.daily.current === 1) 
-                {
-                    hoursArr[x].innerHTML = "1hr";
-                }
-                else 
-                {
-                    hoursArr[x].innerHTML = `${data[x].timeframes.daily.current}hrs`;
-                }
-                if (data[x].timeframes.daily.previous === 1) 
-                {
-                    lastArr[x].innerHTML = `Last day - ${data[x].timeframes.daily.previous}hr`;
-                }
-                else
-                {
-                    lastArr[x].innerHTML = `Last day - ${data[x].timeframes.daily.previous}hrs`;
-                }
-            }
-            break
-        case 2:
-            weeklyBtn.classList.remove("opacity");
-            weeklyBtn.classList.add("active-timeframe");
-            for (x in hoursArr) 
-            {        
-                if (data[x].timeframes.weekly.current === 1) 
-                {
-                    hoursArr[x].innerHTML = "1hr";
-                }
-                else 
-                {
-                    hoursArr[x].innerHTML = `${data[x].timeframes.weekly.current}hrs`;
-                }
-                if (data[x].timeframes.weekly.previous === 1) 
-                {
-                    lastArr[x].innerHTML = `Last day - ${data[x].timeframes.weekly.previous}hr`;
-                }
-                else
-                {
-                    lastArr[x].innerHTML = `Last day - ${data[x].timeframes.weekly.previous}hrs`;
-                }
-            }
-            break
-        case 3:
-            monthlyBtn.classList.remove("opacity");
-            monthlyBtn.classList.add("active-timeframe");
-            for (x in hoursArr) 
-            {        
-                if (data[x].timeframes.monthly.current === 1) 
-                {
-                    hoursArr[x].innerHTML = "1hr";
-                }
-                else 
-                {
-                    hoursArr[x].innerHTML = `${data[x].timeframes.monthly.current}hrs`;
-                }
-                if (data[x].timeframes.monthly.previous === 1) 
-                {
-                    lastArr[x].innerHTML = `Last day - ${data[x].timeframes.monthly.previous}hr`;
-                }
-                else
-                {
-                    lastArr[x].innerHTML = `Last day - ${data[x].timeframes.monthly.previous}hrs`;
-                }
-            }
-            break
-        default:
-            console.log("Error. Invalid entry to switch.");
-    }
-}
+function addOpacity() {
+  const timeframe = [dailyBtn, weeklyBtn, monthlyBtn];
+  for (let x = 0; x < timeframe.length; x++) {
+      timeframe[x].classList.remove("active-timeframe");
+      timeframe[x].classList.add("opacity");
+  };
+};
 
-dailyBtn.addEventListener("click", function() 
-{
-    showHours(1);
+function pushHours(btn, when) {
+  let i = 0;
+  for (x of curEls) {
+    if (curArr[i] === 1) {
+      x.innerHTML = "1hr";
+    } else {
+      x.innerHTML = `${curArr[i]}hrs`;
+    };
+    i++
+  };
+  i = 0;
+  for (x of preEls) {
+    if (preArr[i] === 1) {
+      x.innerHTML = `${when} - 1hr`;
+    } else {
+      x.innerHTML = `${when} - ${preArr[i]}hrs`;
+    };
+    i++
+  }
+  btn.classList.remove("opacity");
+  btn.classList.add("active-timeframe");
+};
+
+function showStats(timeframe) {
+  addOpacity();
+  curArr = []
+  preArr = []
+  fetch("data.json")
+    .then(res => res.json())
+    .then(data => {
+      switch (timeframe) {
+        case daily:
+          for (x in data) {
+            curArr.push(data[x].timeframes.daily.current);
+            preArr.push(data[x].timeframes.daily.previous);
+          };
+          pushHours(dailyBtn, "Yesterday")
+          break
+        case weekly:
+          for (x in data) {
+            curArr.push(data[x].timeframes.weekly.current);
+            preArr.push(data[x].timeframes.weekly.previous);
+          };
+          pushHours(weeklyBtn, "Last week")
+          break
+        case monthly:
+          for (x in data) {
+            curArr.push(data[x].timeframes.monthly.current);
+            preArr.push(data[x].timeframes.monthly.previous);
+          };
+          pushHours(monthlyBtn, "Last month")
+          break
+        default:
+          for (x in data) {
+            curArr.push(data[x].timeframes.weekly.current);
+            preArr.push(data[x].timeframes.weekly.previous);
+          };
+          pushHours(weeklyBtn, "Last week")
+      }    
+    })
+};
+//Initial statistics
+showStats()
+
+dailyBtn.addEventListener("click", function() {
+  showStats(daily);
 })
-weeklyBtn.addEventListener("click", function()
-{
-    showHours(2);
+weeklyBtn.addEventListener("click", function() {
+  showStats(weekly);
 })
-monthlyBtn.addEventListener("click", function() 
-{
-    showHours(3);
+monthlyBtn.addEventListener("click", function() {
+  showStats(monthly);
 })
