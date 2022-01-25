@@ -133,6 +133,11 @@ a { color: hsl(83, 82%, 40%); }
     overflow: hidden;
     height: 240px;
     width: 250px;
+    transition: .05s linear;
+    transform: scale(1);
+}
+.subject-content-container:hover {
+    transform: scale(1.02)
 }
 
 /* Z-index: 1 so that it its above the background div. */
