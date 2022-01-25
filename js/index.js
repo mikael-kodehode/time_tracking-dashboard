@@ -19,7 +19,7 @@ function addOpacity()
         timeframe[x].classList.add("opacity");
     }
 }
-fetch("js/data.json")
+fetch("data.json")
     .then(res => res.json())
     .then(data => console.log(data))
 //A switch based on a specific parameter from each event listener deciding what timeframe to show.
