@@ -13,16 +13,24 @@
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 <body>
-  <div class="shell-container">
-    <div class="inner-container">
+  <main>
+    <div class="shell-container">
+      <div class="inner-container">
 
-      <div class="profile">
-        <div class="profile-container">
-          <img id="profile-picture" src="images/image-jeremy.png" alt="the face of Jeremy Robson">
-          <div class="name">
-            <p id="small-report">Report for</p>
-            <h2>Jeremy Robson</h2>
+        <div class="profile">
+          <div class="profile-container">
+            <img id="profile-picture" src="images/image-jeremy.png" alt="the face of Jeremy Robson">
+            <div class="name">
+              <p id="small-report">Report for</p>
+              <h2>Jeremy Robson</h2>
+            </div>
+          </div> <!--closing profile-container-->
+          <div class="date-nav">
+            <p id="daily" class="opacity">Daily</p>
+            <p id="weekly" class="active-timeframe">Weekly</p>
+            <p id="monthly" class="opacity">Monthly</p>
           </div>
+
         </div> <!--closing profile-container-->
         <div class="date-nav">
           <p id="daily" class="opacity">Daily</p>
@@ -129,6 +137,7 @@
     Coded by <a href="https://github.com/mikael-kodehode" target="_blank">Mikael Svartrud Ødegaard</a>.
   </div>
 </div> <!--closing shell-container-->
+</main>
 
   <script src="js/index.js"></script>
 </body>
