@@ -107,25 +107,11 @@ const dailyBtn = document.querySelector("#daily");
 const weeklyBtn = document.querySelector("#weekly");
 const monthlyBtn = document.querySelector("#monthly");
 
-//Main elements showing hours
-const workHours = document.querySelector("#work-hours");
-const playHours = document.querySelector("#play-hours");
-const studyHours = document.querySelector("#study-hours");
-const excerciseHours = document.querySelector("#excercise-hours");
-const socialHours = document.querySelector("#social-hours");
-const selfCareHours = document.querySelector("#self-care-hours");
-//Creating an array for easy use
-const hoursArr = [workHours, playHours, studyHours, excerciseHours, socialHours, selfCareHours];
+//Main element showing hours 
+const cur = document.getElementsByClassName("cur")
 
 //Elements showing hours last day/week/month
-const workLast = document.querySelector("#work-last");
-const playLast = document.querySelector("#play-last");
-const studyLast = document.querySelector("#study-last");
-const excerciseLast = document.querySelector("#excercise-last");
-const socialLast = document.querySelector("#social-last");
-const selfCareLast = document.querySelector("#self-care-last");
-//Same, creating an array for easy use
-const lastArr = [workLast, playLast, studyLast, excerciseLast, socialLast, selfCareLast];
+const pre = document.getElementsByClassName("pre")
 
 //Function that resets the active button
 function addOpacity() 
@@ -137,7 +123,10 @@ function addOpacity()
         timeframe[x].classList.add("opacity");
     }
 }
-
+const data = require(file)
+fetch("lib/data.json")
+    .then(res => res.json())
+    .then(data => console.log(data))
 //A switch based on a specific parameter from each event listener deciding what timeframe to show.
 function showHours(number) 
 {
