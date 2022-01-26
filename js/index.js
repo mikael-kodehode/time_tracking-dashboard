@@ -48,6 +48,7 @@ function showStats(timeframe) {
   addOpacity();
   curArr = []
   preArr = []
+  console.log("js/data.json")
   fetch("js/data.json")
     .then(res => res.json())
     .then(data => {
