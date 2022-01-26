@@ -48,7 +48,7 @@ function showStats(timeframe) {
   addOpacity();
   curArr = []
   preArr = []
-  fetch("data.json")
+  fetch("js/data.json")
     .then(res => res.json())
     .then(data => {
       switch (timeframe) {
