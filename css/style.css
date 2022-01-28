@@ -259,7 +259,6 @@ Mobile version - making everything columns and 400px wide
     }
     .name {
         margin: 2em 1em;
-
         justify-content: space-evenly;
     }
     #small-report {
@@ -268,11 +267,12 @@ Mobile version - making everything columns and 400px wide
     .date-nav {
         margin: .3em 1em;
         font-size: 1.35rem;
+        justify-content: space-evenly;
     }
     #daily,
     #weekly,
     #monthly {
-        margin: 1em 0;
+        margin: 1em 2px;
     }
     .subject-content-container {
         margin: 1em;
