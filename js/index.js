@@ -85,13 +85,15 @@ function showStats(timeframe) {
 };
 //Initial statistics
 showStats()
-
+/*
 dailyBtn.addEventListener("click", function() {
   showStats(daily);
-})
+})*/
 weeklyBtn.addEventListener("click", function() {
   showStats(weekly);
 })
 monthlyBtn.addEventListener("click", function() {
   showStats(monthly);
 })
+
+dailyBtn.addEventListener("click", (daily) => showStats)
